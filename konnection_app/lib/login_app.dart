@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
 import 'mail_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -29,11 +30,7 @@ class LoginPage extends StatelessWidget {
               ),
               Text(
                 'Student Login',
-                style: TextStyle(
-                  fontSize: 30.0,
-                  color: Colors.orange,
-                  fontFamily: 'SourceScansPro',
-                ),
+                style: GoogleFonts.lato(),
               ),
               SizedBox(height: 20.0),
               Container(
