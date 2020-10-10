@@ -12,7 +12,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  google_fonts: ^1.1.0
 
 
   cupertino_icons: ^1.0.0
@@ -25,9 +25,10 @@ flutter:
 
   uses-material-design: true
   assets:
-    - images/meghana.jpg
+    - images/icon.jpg
     - images/student.jpg
     - images/spoc.jpg
+    - images/org.jpg
   fonts:
     - family: Pacifico
       fonts:

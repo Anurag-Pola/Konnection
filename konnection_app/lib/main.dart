@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login_app.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,62 +8,72 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return new MaterialApp(
+        home: new MainPage());
+  }
+}
+
+
+class MainPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
       home:Scaffold(
         backgroundColor: Colors.orange,
         body:SafeArea(
           child:Column(
             children: <Widget>[
-
               Center(
-                child: CircleAvatar(
-                  radius:60.0,
-                  backgroundImage:AssetImage('images/meghana.jpg'),
+                  child: CircleAvatar(
+                    radius:60.0,
+                    backgroundImage:AssetImage('images/icon.jpg'),
+                  ),
                 ),
-              ),
               Center(
                 child: Text(
                   'Konnection',
                   style:TextStyle(
                     fontFamily:'Pacifico',
-                    fontSize: 30,
+                    fontSize: 60.0,
                     color:Colors.black,
                   ),
                 ),
               ),
-              Column(
-                children: <Widget>[
-                   Center(
-                     child: CircleAvatar(
-                      radius:60.0,
-                      backgroundImage:AssetImage('images/student.jpg'),
-                  ),
-                   ),
+
                   Center(
-                    child: Text(
-                      'Student',
-                      style: TextStyle(
-                        fontSize: 20.0,
+                    child: GestureDetector(
+                      child: CircleAvatar(
+                          radius:60.0,
+                          backgroundImage:AssetImage('images/student.jpg'),
                       ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LoginPage()),
+                          );
+                        }
                     ),
                   ),
-
-                ],
+              SizedBox(
+                height: 40.0,
               ),
-
-
-
               Row(
-                children: [
-                  CircleAvatar(
-                    radius:60.0,
-                    backgroundImage:AssetImage('images/spoc.jpg'),
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                CircleAvatar(
+                      radius:60.0,
+                      backgroundImage:AssetImage('images/spoc.jpg'),
+                    ),
+
+                  SizedBox(
+                    width: 60.0,
                   ),
-                  CircleAvatar(
-                    radius:60.0,
-                    backgroundImage:AssetImage('images/meghana.jpg'),
-                  ),
-                ],
+                      CircleAvatar(
+                        radius:60.0,
+                        backgroundImage:AssetImage('images/org.jpg'),
+                      ),
+        ],
               ),
             ],
           ),
