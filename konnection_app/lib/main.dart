@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login_app.dart';
+import './screens/tabs_screen.dart';
 
 
 void main() {
