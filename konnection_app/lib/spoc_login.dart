@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:konnection_app/screens/tabs_screen.dart';
 import 'mail_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'reusable_card.dart';
@@ -46,19 +47,18 @@ class SpocPage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               RaisedButton(
-                onPressed: (){},
                 color: Colors.orangeAccent,
                 child: Text('Login'),
-               /* onPressed: () {
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return HomePage();
+                        return TabsScreen();
                       },
                     ),
                   );
-                },*/
+                },
               ),
               SizedBox(height:20.0),
               GestureDetector(

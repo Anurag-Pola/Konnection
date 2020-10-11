@@ -3,6 +3,7 @@ import 'mail_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'reusable_card.dart';
 import 'org_signup.dart';
+import 'screens/tabs_screen.dart';
 
 class OrgPage extends StatelessWidget {
   @override
@@ -46,10 +47,9 @@ class OrgPage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               RaisedButton(
-                onPressed: (){},
                 color: Colors.orangeAccent,
                 child: Text('Login'),
-               /* onPressed: () {
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -58,7 +58,7 @@ class OrgPage extends StatelessWidget {
                       },
                     ),
                   );
-                },*/
+                },
               ),
               SizedBox(height:20.0),
               GestureDetector(
