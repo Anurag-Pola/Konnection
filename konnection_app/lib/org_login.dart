@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home_page.dart';
+import './screens/tabs_screen.dart';
 import 'mail_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'reusable_card.dart';
@@ -54,7 +54,7 @@ class OrgPage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return HomePage();
+                        return TabsScreen();
                       },
                     ),
                   );

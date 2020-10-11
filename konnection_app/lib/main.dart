@@ -3,7 +3,6 @@ import 'student_login.dart';
 import 'spoc_login.dart';
 import 'org_login.dart';
 
-
 void main() {
   runApp(MyApp());
 }
@@ -12,51 +11,52 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primaryColor: Colors.orange,
+        ),
         home: new MainPage());
   }
 }
-
 
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:Scaffold(
+      home: Scaffold(
         backgroundColor: Colors.orange,
-        body:SafeArea(
-          child:Column(
+        body: SafeArea(
+          child: Column(
             children: <Widget>[
               Center(
-                  child: CircleAvatar(
-                    radius:60.0,
-                    backgroundImage:AssetImage('images/icon.jpg'),
-                  ),
+                child: CircleAvatar(
+                  radius: 60.0,
+                  backgroundImage: AssetImage('images/icon.jpg'),
                 ),
+              ),
               Center(
                 child: Text(
                   'Konnection',
-                  style:TextStyle(
-                    fontFamily:'Pacifico',
+                  style: TextStyle(
+                    fontFamily: 'Pacifico',
                     fontSize: 60.0,
-                    color:Colors.black,
+                    color: Colors.black,
                   ),
                 ),
               ),
-
-                  Center(
-                    child: GestureDetector(
-                      child: CircleAvatar(
-                          radius:60.0,
-                          backgroundImage:AssetImage('images/student.jpg'),
-                      ),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => LoginPage()),
-                          );
-                        }
+              Center(
+                child: GestureDetector(
+                    child: CircleAvatar(
+                      radius: 60.0,
+                      backgroundImage: AssetImage('images/student.jpg'),
                     ),
-                  ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    }),
+              ),
               SizedBox(
                 height: 40.0,
               ),
@@ -64,35 +64,18 @@ class MainPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                GestureDetector(
-                  child: CircleAvatar(
-                        radius:60.0,
-                        backgroundImage:AssetImage('images/spoc.jpg'),
-                      ),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SpocPage()),
-                    );
-                  },
-                ),
-
+                  CircleAvatar(
+                    radius: 60.0,
+                    backgroundImage: AssetImage('images/spoc.jpg'),
+                  ),
                   SizedBox(
                     width: 60.0,
                   ),
-                      GestureDetector(
-                        child: CircleAvatar(
-                          radius:60.0,
-                          backgroundImage:AssetImage('images/org.jpg'),
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => OrgPage()),
-                          );
-                        },
-                      ),
-        ],
+                  CircleAvatar(
+                    radius: 60.0,
+                    backgroundImage: AssetImage('images/org.jpg'),
+                  ),
+                ],
               ),
             ],
           ),
