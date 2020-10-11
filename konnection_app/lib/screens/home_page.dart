@@ -6,6 +6,9 @@ class HomeScreen extends StatelessWidget {
     return Column(
       children: [
         Container(
+          decoration: BoxDecoration(
+            border: Border.all(width: 1),
+          ),
           margin: EdgeInsets.all(15),
           child: Column(
             children: [
@@ -13,12 +16,12 @@ class HomeScreen extends StatelessWidget {
                   "https://techcrunch.com/wp-content/uploads/2019/05/Screen-Shot-2019-05-01-at-9.19.45-AM.png"),
               Row(
                 children: [
-                  SizedBox(width:5),
+                  SizedBox(width: 5),
                   IconButton(
                     onPressed: () {},
                     icon: Icon(Icons.favorite),
                   ),
-                  SizedBox(width:5),
+                  SizedBox(width: 5),
                   IconButton(
                     onPressed: () {},
                     icon: Icon(Icons.comment),
@@ -28,13 +31,16 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {},
                     icon: Icon(Icons.share),
                   ),
-                  SizedBox(width:5),
+                  SizedBox(width: 5),
                 ],
               )
             ],
           ),
         ),
-      Container(
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(width: 1),
+          ),
           margin: EdgeInsets.all(15),
           child: Column(
             children: [
@@ -42,12 +48,12 @@ class HomeScreen extends StatelessWidget {
                   "https://assets.website-files.com/5e3c45dea042cf97f3689681/5e417cd336a72b06a86c73e7_Flutter-Tutorial-Header%402x.jpg"),
               Row(
                 children: [
-                  SizedBox(width:5),
+                  SizedBox(width: 5),
                   IconButton(
                     onPressed: () {},
                     icon: Icon(Icons.favorite),
                   ),
-                  SizedBox(width:5),
+                  SizedBox(width: 5),
                   IconButton(
                     onPressed: () {},
                     icon: Icon(Icons.comment),
@@ -57,13 +63,12 @@ class HomeScreen extends StatelessWidget {
                     onPressed: () {},
                     icon: Icon(Icons.share),
                   ),
-                  SizedBox(width:5),
+                  SizedBox(width: 5),
                 ],
               )
             ],
           ),
         ),
-
       ],
     );
   }
