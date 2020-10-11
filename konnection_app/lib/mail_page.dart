@@ -16,9 +16,13 @@ class MailPage extends StatelessWidget {
                 fontSize: 20.0,
               ),
           ),
-              Card(
-                color: Colors.white,
+              Container(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow:[BoxShadow(color:Colors.black38,offset:Offset(10,8),blurRadius: 8, )],
+                  borderRadius: BorderRadius.circular(20),
+                ),
                 child: ListTile(
                   leading: Icon(
                     Icons.mail,
@@ -38,8 +42,7 @@ class MailPage extends StatelessWidget {
               ),
               Text(
                 'Link sent to your Mail !',
-                style: TextStyle(
-                  fontFamily: 'Pacifico',
+                style:GoogleFonts.mcLaren(
                   fontSize: 30.0,
                 ),
               ),

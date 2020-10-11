@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'login_app.dart';
+import 'student_login.dart';
+import 'spoc_login.dart';
+import 'org_login.dart';
 
 
 void main() {
@@ -62,17 +64,33 @@ class MainPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                CircleAvatar(
-                      radius:60.0,
-                      backgroundImage:AssetImage('images/spoc.jpg'),
-                    ),
+                GestureDetector(
+                  child: CircleAvatar(
+                        radius:60.0,
+                        backgroundImage:AssetImage('images/spoc.jpg'),
+                      ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => SpocPage()),
+                    );
+                  },
+                ),
 
                   SizedBox(
                     width: 60.0,
                   ),
-                      CircleAvatar(
-                        radius:60.0,
-                        backgroundImage:AssetImage('images/org.jpg'),
+                      GestureDetector(
+                        child: CircleAvatar(
+                          radius:60.0,
+                          backgroundImage:AssetImage('images/org.jpg'),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => OrgPage()),
+                          );
+                        },
                       ),
         ],
               ),
