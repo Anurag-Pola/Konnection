@@ -3,6 +3,7 @@ import 'mail_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'student_signup.dart';
 import 'reusable_card.dart';
+import './screens/tabs_screen.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -48,17 +49,16 @@ class LoginPage extends StatelessWidget {
               RaisedButton(
                 color: Colors.orange,
                 child: Text('Login'),
-
-               /* onPressed: () {
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return HomePage();
+                        return TabsScreen();
                       },
                     ),
                   );
-                },*/
+                },
               ),
               SizedBox(height:20.0),
               GestureDetector(

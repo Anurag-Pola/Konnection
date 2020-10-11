@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'student_login.dart';
-import 'spoc_login.dart';
-import 'org_login.dart';
 
 void main() {
   runApp(MyApp());

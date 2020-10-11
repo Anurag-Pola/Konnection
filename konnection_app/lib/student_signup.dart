@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'mail_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'reusable_card.dart';
 import 'student_login.dart';
+import './screens/tabs_screen.dart';
 
 class SsignUpPage extends StatelessWidget {
   @override
@@ -73,16 +73,16 @@ class SsignUpPage extends StatelessWidget {
               RaisedButton(
                 color: Colors.orangeAccent,
                 child: Text('SignUp'),
-                /*onPressed: () {
+                onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return HomePage();
+                        return TabsScreen();
                       },
                     ),
                   );
-                },*/
+                },
               ),
 
               SizedBox(height: 30.0),

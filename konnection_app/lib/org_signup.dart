@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'mail_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'reusable_card.dart';
 import 'org_login.dart';
@@ -30,7 +29,7 @@ class OsignUpPage extends StatelessWidget {
                 ),
               ),
               Text(
-                'Student SignUp',
+                'Organisation SignUp',
                 style: GoogleFonts.lato(
                   fontSize: 20.0,
                 ),
@@ -58,6 +57,7 @@ class OsignUpPage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               RaisedButton(
+                onPressed: (){},
                 color: Colors.orangeAccent,
                 child: Text('SignUp'),
                 /*onPressed: () {
